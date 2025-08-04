@@ -39,7 +39,7 @@ DriverScrub/
 ## 🚀 Getting Started
 1. Clone the repo
 bash
-git clone https://github.com/yourname/DriverScrub
+git clone https://github.com/satyamvijayan12/Driver-Scrub-Utility
 cd DriverScrub
 2. Install dependencies
 pip install -r requirements.txt
