@@ -11,7 +11,7 @@ from core.backup import backup_inf
 class DriverScrubWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Driver Scrub Utility")
+        self.setWindowTitle("Driver Utility Scrub v0.2 - Satyam Vijayan")
         self.setGeometry(100, 100, 900, 700)
         
         main_layout = QVBoxLayout()
