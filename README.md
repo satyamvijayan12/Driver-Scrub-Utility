@@ -1,63 +1,168 @@
 🧼 Driver Scrub Utility
-Remove outdated or incompatible drivers from your Windows system—safely, efficiently, and stylishly.
+Remove outdated or incompatible drivers from your Windows system—safely, efficiently, and efficiently.
 
 Handcrafted Windows Utility Tool By Zenexis Studios Designed by Satyam Vijayan
 
-## 📦 Features
-🔍 Incompatible Driver Scanner Detects unused or legacy drivers no longer associated with active devices.
+## ✨ Major Features - v0.2
 
-✅ Checkbox Selection UI Easy-to-use interface for manual selection of drivers to remove.
+### 🎨 **UI/UX Overhaul**
+- **Scrollable Driver Table** - Professional QTableWidget
+  - Auto-scrolling for large driver lists
+  - Clean 4-column layout (Select, Driver Name, INF File, Action)
+  - Responsive design with proper sizing
 
-🧼 Safe Removal Engine Backs up .INF files and skips critical drivers to protect your system.
+- **Selectable Drivers** - Enhanced selection interface
+  - Individual checkboxes for each driver
+  - "Select All" button to check all drivers at once
+  - "Deselect All" button to clear all selections
+  - "Remove Selected" button for batch driver removal
 
-🔄 System Restore Integration Automatically creates a restore point before changes.
+- **Direct Uninstall Capability** - Per-driver control
+  - Individual "Uninstall" button for each driver
+  - Direct one-click driver removal without selection
+  - Bulk removal via "Remove Selected" option
+  - Safety features: Automatic restore point creation and INF backup
 
-🌙 Dark Mode UI Sleek, modern PyQt5 interface with electric teal highlights.
+### 🎯 **Enhanced Dark Theme**
+- Modern cyan accent color (#00FFD0) throughout
+- Improved button styling with hover effects
+- Enhanced checkbox styling with visual feedback
+- Professional table styling with proper contrast
+- Smooth scrollbar integration
+- Better overall visual hierarchy
 
-📜 Log Viewer Displays real-time status of each action: backup, skipped, or removed.
+### 🔒 **Professional Distribution**
+- **EXE Build System** - Complete Windows executable generation
+  - Single-file executable with embedded Python runtime
+  - Administrator privileges via Windows manifest
+  - No Python installation required for end users
+  - Works on Windows 7, 8, 10, and 11
 
-## 🗂 Folder Structure
-DriverScrub/
+
+
+### ⚙️ SYSTEM FILES
+
+## 📋 Directory Structure After Update
+
+```
+Driver-Scrub-Utility/
+├── 🔶 Update_admin.bat              ← DOUBLE-CLICK THIS!
+├── build_exe.py
+├── Driver scrub utility.bat
+├── app.manifest
+│
+├── 📖 README.md              ← START HERE
+├── 📖 QUICK_START_BUILD.md
+├── 📖 VISUAL_BUILD_GUIDE.md
+├── 📖 README_EXE_BUILD.md
+│
 ├── main.py
+├── requirements.txt
 ├── gui/
-│   ├── main_window.py
-│   ├── dark_theme.py
+│   ├── main_window.py              ← NEW: Table UI
+│   ├── dark_theme.py               ← NEW: Enhanced theme
+│   └── ...
 ├── core/
 │   ├── scanner.py
 │   ├── remover.py
-│   ├── restore.py
-│   ├── backup.py
-├── backups/
-│   └── *.inf
-├── assets/
-│   └── icon.png
-├── logs/
-│   └── removal_log.txt
-├── README.md
-└── requirements.txt
+│   └── ...
+│
+├── dist/                           ← BUILD OUTPUT
+│   └── Driver Scrub Utility.exe    ← YOUR EXE ✨
+│
+└── build/                          ← Temporary build files
+```
+
+
+
+| File | Purpose |
+|------|---------|
+| **app.manifest** | Requests admin privileges from Windows |
+| **requirements.txt** | Python dependencies (PyQt5, WMI) |
+
 
 ## 🚀 Getting Started
-1. Clone the repo
-bash
-git clone https://github.com/satyamvijayan12/Driver-Scrub-Utility
-cd DriverScrub
-2. Install dependencies
-pip install -r requirements.txt
-3. Run the tool
-python main.py
 
-## ⚙ Dependencies
-PyQt5
+### 🎯 Step-by-step Start up Guide
+- Open your file location
+- Run Update Admin (Cmd will open and install pkg dependencies)
+- Run Driver Scrub utility v0.2 (To update dependencies if update available!!!)
+- Open Driver Scrub utility.exe (Application)
+- Happy cleaning!!!
 
-wmi
 
-## Install with:
+| Tool | How to Use | Difficulty |
+|------|-----------|-----------|
+| **Update_admin.bat** | Double-click it | ⭐ Easiest |
+| **build_exe.py** | `python build_exe.py` | ⭐⭐ Easy |
+| **Driver Scrub Utility v0.2.bat** | `build.bat` | ⭐⭐ Easy |
+
+**Recommendation:** Use `Update_admin.bat` - just double-click!
+
+**Note:** Your app will request admin privileges because:
+
+1. **Driver detection** requires WMI access (admin)
+2. **System restore points** need registry access (admin)
+3. **INF backup** requires reading system directories (admin)
+4. **Driver uninstall** needs system-level access (admin)
+
+
+## ✨ Features Of Driver Scrub Utility v0.23
+
+```
+✅ Single File              Your whole app in ONE file
+✅ Admin Privileges         Automatic UAC prompt on launch
+✅ No Python Required       Works on any Windows PC
+✅ All Dependencies         PyQt5, WMI, everything bundled
+✅ Scrollable UI            New table-based driver list
+✅ Selectable              Checkboxes for driver selection
+✅ Direct Uninstall        Per-driver uninstall buttons
+✅ Professional Look        Dark theme, modern design
+✅ Portable                 Copy & share anywhere
+✅ Small Dependencies       Not dependencies, everything inside!
+```
+
+
+
+## ⚙ Dependencies (Just for knowledge)
+- PyQt5
+- wmi
+
+## Install with: (if using previous versions)
 (bash)
 pip install PyQt5 wmi
 
 ## 🛡 Safety Notes
 INF files are backed up before removal.
 
+### Sharing with Others:
+```
+1. Copy: dist\Driver Scrub Utility.exe
+2. Send via email, cloud, USB, etc.
+3. They double-click it
+4. Windows asks for admin → They click Yes
+5. It works! ✨
+
+No Python installation needed on their PC!
+```
+
+## QnA Section
+## 🆘 Common Issues & Quick Fixes
+
+| Issue | Fix |
+|-------|-----|
+| "Build doesn't start" | Run as Administrator (right-click batch → Run as admin) |
+| "Python not found" | Install Python from python.org (add to PATH) |
+| "PyInstaller error" | Run: `pip install --upgrade pyinstaller` |
+| "Module not found" | Run: `pip install -r requirements.txt` |
+| "Access denied" | Disable antivirus temporarily during build |
+| "Build is slow" | Wait! 2-5 minutes is normal ☕ |
+
+
+
 Critical drivers (System, Network, Display, etc.) are skipped by default.
 
 A system restore point is created automatically using PowerShell.
+
+
+
