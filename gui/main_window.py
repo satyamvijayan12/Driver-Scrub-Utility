@@ -90,7 +90,7 @@ class DriverScrubWindow(QWidget):
         main_layout.addWidget(self.log)
 
         # Footer branding
-        footer = QLabel("Powered by <b>Text Tool by Zenexis Lab</b>")
+        footer = QLabel("Handcrafted Windows Utility Tool By <b>Zenexis Studios</b>")
         footer.setAlignment(Qt.AlignCenter)
         footer.setStyleSheet("color: #777777; font-size: 12px; padding: 10px; border-top: 1px solid #333333;")
         main_layout.addWidget(footer)

@@ -1,7 +1,7 @@
 🧼 Driver Scrub Utility
 Remove outdated or incompatible drivers from your Windows system—safely, efficiently, and stylishly.
 
-Powered by Text Tool by Zenexis Lab Designed by Satyam Vijayan
+Handcrafted Windows Utility Tool By Zenexis Studios Designed by Satyam Vijayan
 
 ## 📦 Features
 🔍 Incompatible Driver Scanner Detects unused or legacy drivers no longer associated with active devices.
