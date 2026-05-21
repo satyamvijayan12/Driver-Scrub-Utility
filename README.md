@@ -188,5 +188,7 @@ Critical drivers (System, Network, Display, etc.) are skipped by default.
 
 A system restore point is created automatically using PowerShell.
 
+### Feel free to fork and patch bugs, for inquiries mailto:genesislabsinc@gmail.com
+
 
 
