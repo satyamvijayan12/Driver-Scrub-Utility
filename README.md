@@ -3,7 +3,7 @@ Remove outdated or incompatible drivers from your Windows system—safely, effic
 
 Handcrafted Windows Utility Tool By Zenexis Studios Designed by Satyam Vijayan
 
-## ✨ Major Features - v0.2
+## ✨ Major Features - v0.2 Update
 
 ### 🎨 **UI/UX Overhaul**
 - **Scrollable Driver Table** - Professional QTableWidget
@@ -98,6 +98,30 @@ Driver-Scrub-Utility/
 | **Driver Scrub Utility v0.2.bat** | `build.bat` | ⭐⭐ Easy |
 
 **Recommendation:** Use `Update_admin.bat` - just double-click!
+```
+User Double-Clicks: Driver Scrub Utility.exe
+                           ↓
+        Windows Detects Admin Requirement
+        (from embedded app.manifest)
+                           ↓
+        ┌────────────────────────────────────┐
+        │  User Account Control (UAC)        │
+        │  ┌──────────────────────────────┐  │
+        │  │ Do you want to allow this    │  │
+        │  │ app to make changes to your  │  │
+        │  │ device?                      │  │
+        │  │ Driver Scrub Utility         │  │
+        │  │                              │  │
+        │  │ [Yes]      [No]              │  │
+        │  └──────────────────────────────┘  │
+        └────────────────────────────────────┘
+                           ↓
+                      User Clicks YES
+                           ↓
+                   App Runs with Admin
+                   Can now access drivers!
+```
+
 
 **Note:** Your app will request admin privileges because:
 
